@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Whatsapp Message a number</title>
+	<title>Whatsapp Message URL generator</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 	<div class = "center">
-		<h3>Text any whatsapp number</h3>
+		<h2>Whatsapp message url generator</h2>
 		<form action="#" onsubmit="sendMessage()">
-		<table>
-			<p id = 'errorCode'>You can start a conversation by leaving the text area blank</p>
-			<tr>
-				<td><label>whatsapp number</label></td>
-				<td><input type="text" size = "1" name="ccode" value="091" id="ccode" maxlength="3">&nbsp;<input type = "number" placeholder="whatsapp number" id = "wno" pattern="[0-9]{10}" required></td>
-			</tr>
-			
-			<tr>
-				<td><label>Text</label></td>
-				<td><input type = "text" placeholder="Text you wanna send" id = "wtext" ></td>
-			</tr>
-			
-			<tr>
-				<td><input type = "submit"  placeholder = "Send message" name = "send Message"></td>
-			</tr>
-			
-		</table>
+
+			<div class="txt_field">
+          		<input type="number" id="wno" pattern="[0-9]{10}" required>
+          		<span></span>
+          		<label>Number</label>
+        	</div>
+
+        	<div class="txt_field">
+          		<input type="text" id="wtext" required>
+          		<span></span>
+          		<label>text</label>
+       	 	</div>
+
+			<input type = "submit" value = "send Message">
+				
+			<p id = 'urcode'></p>	
+
 		</form>
 		<br>
-		<p id = 'urcode'></p>
+		
 	</div>
-	<script src="javascript.js"></script>
+	<script src="javascript.js">
+	</script>
 </body>
 </html>
