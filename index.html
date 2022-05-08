@@ -15,12 +15,11 @@
 <body>
 	<div class = "center">
 		<h3>Text any whatsapp number</h3>
-		<form action="#">
+		<form action="#" onsubmit="sendMessage()">
 		<table>
-		
-
+			<p id = 'errorCode'>You can start a conversation by leaving the text area blank</p>
 			<tr><td>
-			<label>whatsapp number</label></td><td><input type = "number" placeholder="whatsapp number" id = "wno" pattern="[0-9]{10}" required>
+			<label>whatsapp number</label></td><td><input type="text" size = "1" name="ccode" value="091" id="ccode" maxlength="3">&nbsp;<input type = "number" placeholder="whatsapp number" id = "wno" pattern="[0-9]{10}" required>
 			</td></tr>
 			<br>
 			<tr><td>
@@ -29,7 +28,7 @@
 			<br>
 		
 			<tr><td>
-			<input type = "submit" onclick="sendMessage()" placeholder = "Send message" name = "submit">
+			<input type = "submit"  placeholder = "Send message" name = "send Message">
 			</td></tr>
 		</table>
 		</form>
@@ -37,14 +36,12 @@
 		<p id = 'urcode'></p>
 	</div>
 	<script>
-		
+
 		function sendMessage() {
 
 			var texturl = encodeURIComponent(document.getElementById("wtext").value);
-			document.getElementById("urcode").innerHTML = "url generated is https://wa.me/91" + document.getElementById('wno').value + "?text=" + texturl + "";
+			document.getElementById("urcode").innerHTML = "url generated is https://wa.me/" + document.getElementById('ccode').value + "" + document.getElementById('wno').value + "?text=" + texturl + "";
            	window.open("https://wa.me/91" + document.getElementById("wno").value + "?text=" + texturl + "", "_blank");
-
-           	
 
         }
 	</script>
