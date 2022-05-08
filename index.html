@@ -2,16 +2,9 @@
 <html>
 <head>
 	<title>Whatsapp Message a number</title>
-	<style>
-		.center {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
-			padding: 10px;
-		}
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 	<div class = "center">
 		<h3>Text any whatsapp number</h3>
@@ -35,15 +28,6 @@
 		<br>
 		<p id = 'urcode'></p>
 	</div>
-	<script>
-
-		function sendMessage() {
-
-			var texturl = encodeURIComponent(document.getElementById("wtext").value);
-			document.getElementById("urcode").innerHTML = "url generated is https://wa.me/" + document.getElementById('ccode').value + "" + document.getElementById('wno').value + "?text=" + texturl + "";
-           	window.open("https://wa.me/91" + document.getElementById("wno").value + "?text=" + texturl + "", "_blank");
-
-        }
-	</script>
+	<script src="javascript.js"></script>
 </body>
 </html>
