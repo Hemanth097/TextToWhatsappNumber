@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Whatsapp Message a number</title>
+	<style>
+		.center {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class = "center">
+		<h3>Text any whatsapp number</h3>
+		<form action="#">
+		<table>
+		
+
+			<tr><td>
+			<label>whatsapp number</label></td><td><input type = "number" placeholder="whatsapp number" id = "wno" pattern="[0-9]{10}" required>
+			</td></tr>
+			<br>
+			<tr><td>
+			<label>Text</label></td><td><input type = "text" placeholder="Text you wanna send" id = "wtext" required>
+			</td></tr>
+			<br>
+		
+			<tr><td>
+			<input type = "submit" onclick="sendMessage()" placeholder = "Send message" name = "submit">
+			</td></tr>
+		</table>
+		</form>
+		<br>
+		<p id = 'urcode'></p>
+	</div>
+	<script>
+		
+		function sendMessage() {
+
+			var texturl = encodeURIComponent(document.getElementById("wtext").value);
+			document.getElementById("urcode").innerHTML = "url generated is https://wa.me/91" + document.getElementById('wno').value + "?text=" + texturl + "";
+           	window.open("https://wa.me/91" + document.getElementById("wno").value + "?text=" + texturl + "", "_blank");
+
+           	
+
+        }
+	</script>
+</body>
+</html>
