@@ -8,7 +8,7 @@
 <body>
 	<div class = "center">
 		<h2>Whatsapp message url generator</h2>
-		<form action="#" onsubmit="sendMessage()">
+		<form action="#" onsubmit="GenerateURL()">
 
 			<div class="txt_field">
           		<input type="number" id="wno" pattern="[0-9]{10}" required>
@@ -23,6 +23,7 @@
        	 	</div>
 
 			<input type = "submit" value = "Generator">
+                        <input type = "button" value = "send message" onclick = "send message()">
 				
 			<p id = 'urcode'></p>	
 
